@@ -1,12 +1,12 @@
 
 
-function myhigherFunction (func)  {
+function myhigherFunction ()  {
     console.log ("myhigherFunction")
     return outsideFunction;
 }
 
-function outsideFunction () {
-    console.log("outsidefunction");
+function outsideFunction (value) {
+    console.log("value :" + value);
 }
 
 myhigherFunction();
