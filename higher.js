@@ -1,16 +1,14 @@
-
-
-function myhigherFunction ()  {
-    console.log ("myhigherFunction")
-    return outsideFunction;
+function arrayWalk (data, f) {
+    for (var key in data) {
+        f(data[key], key)
+    }
 }
 
-function outsideFunction (value) {
-    console.log("value :" + value);
+function showElement (value, key) {
+    console.log(key + ' : ' + value);
 }
+var ary = [1, 2, 4, 8, 16];
 
-myhigherFunction();
+arrayWalk (ary, showElement);
 
-var returnValue = myhigherFunction ();
-console.log(returnValue);
-returnValue();
+//ary.forEach(showElement);
