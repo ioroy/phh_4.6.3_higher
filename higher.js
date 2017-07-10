@@ -1,16 +1,16 @@
-function myhigherFunction (func) {
-    console.log('myhigherfunction')
-    func();
-}
+
 
 function myhigherFunction (func)  {
     console.log ("myhigherFunction")
-    func();
+    return outsideFunction;
 }
 
 function outsideFunction () {
-    console.log("outsidefunction")
+    console.log("outsidefunction");
 }
 
-outsideFunction();　　　
-myhigherFunction(outsideFunction);
+myhigherFunction();
+
+var returnValue = myhigherFunction ();
+console.log(returnValue);
+returnValue();
